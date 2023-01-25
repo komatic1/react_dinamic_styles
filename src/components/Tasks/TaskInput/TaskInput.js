@@ -17,12 +17,11 @@ import styles from "./TaskInput.module.css";
 //   & input {
 //     display: block;
 //     width: 100%;
-//     border: 1px solid ${(props) => (props.invalid ? "red" : "#ccc")};
-//     background: ${(props) =>
-//       props.invalid ? "rgb(243, 157, 157)" : "transparent"};
+//     border: 2px solid ${(props) => (props.invalid ? "red" : "#ccc")};
+//     background: ${(props) => (props.invalid ? "#f39d9d" : "transparent")};
 //     font: inherit;
 //     line-height: 1.5rem;
-//     padding: 0 0.25rem;
+//     padding: 0 0 0.25;
 //   }
 
 //   & input:focus {
@@ -54,20 +53,15 @@ const TaskInput = (props) => {
 
   return (
     <form onSubmit={formSubmitHandler}>
-      {/* <FormControl className={!isInputValid && "invalid"}> */}
-      {/* <FormControl invalid={!isInputValid}>
-        <label>Задачи</label>
-        <input type="text" onChange={taskInputChangeHandler} />
-      </FormControl> */}
       <div
         className={`${styles["form-control"]} ${
           !isInputValid && styles.invalid
-        } `}
+        }`}
       >
         <label>Задачи</label>
         <input type="text" onChange={taskInputChangeHandler} />
       </div>
-      <Button type="submit">Добавить Задачу</Button>
+      <Button type="submit">Добвить задачу</Button>
     </form>
   );
 };

@@ -31,3 +31,9 @@
 .form-control.invalid label {
   color: red;
 }
+
+@media (min-width: 700px) {
+  .button {
+    width: auto;
+  }
+}
